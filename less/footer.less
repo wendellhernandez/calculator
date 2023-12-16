@@ -58,9 +58,17 @@ button{
     border-radius: .4em;
     cursor: pointer;
     color: @black;
+    &:hover{
+        background-color: @accent;
+        color: @white;
+    }
 }
 
 #del, #ac{
     background-color: @red;
     grid-column: span 2;
+}
+
+#solve{
+    background-color: @green;
 }
