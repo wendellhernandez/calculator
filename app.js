@@ -7,7 +7,7 @@ let temp = 0;
 calcu.addEventListener('click' , e => {
     if((screen.textContent == 0 
         || 
-        screen.textContent[0] == '='
+        screen.textContent[1] == '='
         )
         && 
         e.target.textContent.length == 1)
@@ -19,7 +19,9 @@ calcu.addEventListener('click' , e => {
     if(e.target.textContent == 'AC'){
         screen.textContent = 0;
     }else if(e.target.textContent == 'DEL'){
-        if(screen.textContent.length == 1){
+        if(screen.textContent[1] == '='){
+
+        }else if(screen.textContent.length == 1){
             screen.textContent = 0;
         }else{
             screen.textContent = screen.textContent.slice(0,-1);
