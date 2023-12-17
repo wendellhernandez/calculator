@@ -1,11 +1,28 @@
+header{
+    background-color: @accent;
+    width: 100%;
+
+    .container{
+        padding: 1em 2em;
+        text-align: center;
+    }
+
+    h1{
+        font-size: 2rem;
+        font-family: @font-family-mac;
+        text-transform: uppercase;
+    }
+}
+
 footer{
     text-align: center;
     padding: 2em;
     background: @accent;
-}
+    font-family: @font-family-mac;
 
-main{
-    padding: 3em;
+    a{
+        font-family: @font-family-mac;
+    }
 }
 
 .container{
@@ -13,15 +30,22 @@ main{
     justify-content: center;
 }
 
+#home{
+    .container{
+        padding: 2em;
+    }
+}
+
 .calculator{
     padding: 1.5em;
     padding-top: 0;
-    background-color: @accent;
+    background-color: #444;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: .2em;
-    box-shadow: 5px 5px 5px 0px @main;
+    border-radius: .4em;
+    box-shadow: 5px 5px 0px 0px @accent;
+    border: 2px solid @accent;
 }
 
 .screen{
@@ -34,7 +58,7 @@ main{
     padding: .6em 1em;
     border-radius: .2em;
     font-size: 1.2rem;
-    max-width: 10.8em;
+    border: 2px solid @accent;
 }
 
 .calcu{
@@ -47,28 +71,27 @@ p{
     padding-block: 1em;
     text-align: left;
     width: 100%;
-    color: @white;
+    color: @accent;
+}
+
+i{
+    color: #999;
 }
 
 button{
-    padding: 1em 1.4em;
-    background-color: @main;
+    padding: .8em;
+    background-color: @white;
     color: white;
     font-weight: bold;
     border-radius: .4em;
     cursor: pointer;
     color: @black;
     &:hover{
-        background-color: @accent;
+        background-color: #333;
         color: @white;
     }
 }
 
 #del, #ac{
     background-color: @red;
-    grid-column: span 2;
-}
-
-#solve{
-    background-color: @green;
 }
